@@ -9,6 +9,6 @@ import java.util.List;
 
 public interface HospitalDetailsDao extends JpaRepository<HospitalDetailsModel,Integer> {
 
-    @Query(value = "SELECT * FROM `hospitaldetails` WHERE `customer_name`=:customerName",nativeQuery = true)
-    List<HospitalDetailsModel> FetchHospitalDetails(@Param("customerName") String customerName);
+    @Query(value = "SELECT * FROM `hospitaldetails` WHERE `customer_name`=:customer_name",nativeQuery = true)
+    List<HospitalDetailsModel> FetchHospitalDetails(@Param("customer_name") String customer_name);
 }

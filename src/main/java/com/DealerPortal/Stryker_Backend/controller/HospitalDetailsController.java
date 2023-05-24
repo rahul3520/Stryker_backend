@@ -48,15 +48,26 @@ public class HospitalDetailsController {
         return sdao.FindbyTicketId(s.getTicketId());
     }
 
+//    @CrossOrigin(origins = "*")
+//    @GetMapping("/viewHospitalDetails")
+//    public List<HospitalDetailsModel> FindHospitalDetails(@RequestParam(name = "currentHospital") String currentHospital)
+//    {
+////        System.out.println(h.getCustomerName());
+//
+////        return hdao.FetchHospitalDetails(h.getCustomerName());
+//
+//        return hdao.FetchHospitalDetails(currentHospital);
+//    }
+
     @CrossOrigin(origins = "*")
-    @GetMapping("/viewHospitalDetails/{nameOfHospital}")
-    public List<HospitalDetailsModel> FindHospitalDetails(@PathVariable String nameOfHospital)
+    @GetMapping("/viewHospitalDetails/{currentHospital}")
+    public List<HospitalDetailsModel> FindHospitalDetails(@PathVariable String currentHospital)
     {
 //        System.out.println(h.getCustomerName());
 
 //        return hdao.FetchHospitalDetails(h.getCustomerName());
 
-        return hdao.FetchHospitalDetails(nameOfHospital);
+        return hdao.FetchHospitalDetails(currentHospital);
     }
 
     @CrossOrigin(origins = "*")
